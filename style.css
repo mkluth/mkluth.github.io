@@ -154,7 +154,7 @@ body {
 }
 
 .terminal-box::before {
-  content: "$ ";
+  content: "luth@Luth:~$ source ~/.bashrc";
   color: var(--text-secondary);
 }
 

@@ -26,3 +26,38 @@ document.querySelectorAll("a[href^='#']").forEach((anchor) => {
     }
   });
 });
+
+// Used for terminal-box <div> styling
+function simulateTypingMotion(elem, text, speed = 50) {
+  elem.textContent = "";
+  let i = 0;
+
+  function typing() {
+    if (i < text.length) {
+      // Typing motion in progress
+      elem.textContent += text.charAt(i);
+      i++;
+      setTimeout(typing, speed);
+    } else {
+      // Typing motion already ended, add blinking cursor at the end because it looks cool
+      const cursor = document.createElement("span");
+      cursor.className = "cursor";
+      // Show full cursor block because I like it
+      cursor.textContent = "\u2588";
+      elem.appendChild(cursor);
+    }
+  }
+
+  typing();
+}
+
+// Add that typing motion thingy on page load bcs again, it looks cool
+window.addEventListener("load", () => {
+  const terminalBox = document.querySelector(".terminal-box");
+  const originalText = terminalBox.textContent;
+
+  // Set some timeout, add some delay, so that it doesn't go wooosh!!!
+  setTimeout(() => {
+    simulateTypingMotion(terminalBox, originalText, 30);
+  }, 1000);
+});
