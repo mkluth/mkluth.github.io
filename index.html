@@ -19,19 +19,20 @@
     <!-- The page header -->
     <header class="header">
       <nav class="nav">
-        <a href="#" class="logo">luth@Luth:~$</a>
+        <a href="#hero" class="logo">luth@Luth:~$</a>
         <ul class="nav-links" id="navLinks">
-          <li><a href="#about" class="nav-link">about</a></li>
           <li><a href="#skills" class="nav-link">skills</a></li>
+          <li><a href="#about" class="nav-link">about</a></li>
           <li><a href="#projects" class="nav-link">projects</a></li>
-          <li><a href="#contact" class="nav-link">contact</a></li>
+          <li><a href="#footer" class="nav-link">contact</a></li>
+          <li><a href="#hero" class="menu-exit nav-link">exit</a></li>
         </ul>
         <button class="nav-toggle" id="navToggle">[MENU]</button>
       </nav>
     </header>
 
     <!-- Hero section -->
-    <section class="hero">
+    <section class="hero" id="hero">
       <div class="hero-content">
         <h1 class="hero-title">LUTHFI MUHAMMAD</h1>
         <p class="hero-subtitle">AN AMATEUR DEVELOPER</p>
@@ -39,11 +40,12 @@
           Hello there! I'm an amateur developer who finds the beauty and the
           elegance of both low-level and high-level programming. I'm currently
           trying to build, exploring and getting my head wrapped around them.
+          <br />
           P/S: I love to reverse engineer stuff that I find interesting ᕙ(⇀‸↼‶)ᕗ
         </div>
         <div class="hero-buttons">
           <a href="#projects" class="btn">./my_projects</a>
-          <a href="#contact" class="btn">./contact_me</a>
+          <a href="#footer" class="btn">./contact_me</a>
         </div>
       </div>
     </section>
@@ -83,7 +85,7 @@
             - phpMyAdmin<br />
           </div>
         </div>
-        <!-- Tools and environment grid -->
+        <!-- Tools grid -->
         <div class="skill-category">
           <h3>./tools</h3>
           <div class="skill-list">
@@ -195,11 +197,26 @@
             <span class="tech-tag">404 Error</span>
           </div>
           <div class="project-links">
-            <a href="#" class="project-link">404 Not Exist</a>
+            <p class="project-link">404 Not Exist</p>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+      <p class="footer-text">-- End of File --</p>
+      <div class="social-links">
+        <a href="https://github.com/mkluth" target="_blank" class="social-link">
+          GitHub
+        </a>
+        <a href="#" target="_blank" class="social-link">Email</a>
+        <a href="#" target="_blank" class="social-link">LinkedIn</a>
+      </div>
+      <p class="footer-text">
+        &copy; 2025-Present luthfi muhammad | compiled with love and gcc -O3
+      </p>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>
