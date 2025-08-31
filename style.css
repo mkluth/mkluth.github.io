@@ -205,6 +205,44 @@ body {
   background: var(--text-primary);
 }
 
+/* Skills section */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.skill-category {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-secondary);
+  padding: 2rem;
+  transition: var(--transition);
+}
+
+.skill-category:hover {
+  border-color: var(--text-primary);
+  background: var(--bg-primary);
+}
+
+.skill-category h3 {
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  font-family: var(--ff-mono);
+}
+
+.skill-category h3::before {
+  content: "$ ";
+  color: var(--text-secondary);
+}
+
+.skill-list {
+  color: var(--text-tertiary);
+  line-height: 1.8;
+  font-family: var(--ff-mono);
+  font-size: 0.9rem;
+}
+
 /* About me section */
 .about-content {
   max-width: 800px;
