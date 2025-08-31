@@ -118,6 +118,23 @@ body {
   font-weight: 400;
 }
 
+/* The terminal cursor blinking animation */
+.cursor {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
 .hero-buttons {
   display: flex;
   gap: 1rem;
@@ -156,6 +173,60 @@ body {
 .terminal-box::before {
   content: "luth@Luth:~$ source ~/.bashrc";
   color: var(--text-secondary);
+}
+
+/* Sections */
+.section {
+  padding: 6rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  margin-bottom: 3rem;
+  position: relative;
+  font-family: var(--ff-mono);
+}
+
+.section-title::before {
+  content: "// ";
+  color: var(--text-secondary);
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 1px;
+  background: var(--text-primary);
+}
+
+/* About me section */
+.about-content {
+  max-width: 800px;
+  line-height: 1.8;
+  color: var(--text-tertiary);
+}
+
+.terminal-block {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-secondary);
+  padding: 1.5rem;
+  margin: 2rem 0;
+  font-family: var(--ff-mono);
+  font-size: 0.9rem;
+  overflow-x: auto;
+}
+
+.terminal-block::before {
+  content: "# I know no one likes to read, it's totally up to you :)";
+  color: var(--text-secondary);
+  display: block;
+  margin-bottom: 1rem;
 }
 
 /* Responsive Design */
