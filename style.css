@@ -267,6 +267,100 @@ body {
   margin-bottom: 1rem;
 }
 
+/* Projects section */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.project-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-secondary);
+  padding: 2rem;
+  position: relative;
+  transition: var(--transition);
+}
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--text-primary);
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.project-card:hover::before {
+  opacity: 1;
+}
+
+.project-card:hover {
+  border-color: var(--text-primary);
+  background: var(--bg-primary);
+}
+
+.project-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  font-family: var(--ff-mono);
+}
+
+.project-title::before {
+  content: "> ";
+  color: var(--text-secondary);
+}
+
+.project-description {
+  color: var(--text-tertiary);
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.tech-tag {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-weight: 400;
+  position: relative;
+}
+
+.tech-tag::before {
+  content: "• ";
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.project-link {
+  padding: 0.4rem 1rem;
+  font-size: 0.85rem;
+  text-decoration: none;
+  border: 1px solid var(--text-secondary);
+  color: var(--text-secondary);
+  transition: var(--transition);
+  font-family: var(--ff-mono);
+}
+
+.project-link:hover {
+  background: var(--text-secondary);
+  color: var(--bg-primary);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .nav-links {
@@ -294,6 +388,10 @@ body {
   .hero-buttons {
     justify-content: center;
   }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 480px) {
@@ -307,5 +405,9 @@ body {
   .btn {
     padding: 0.6rem 1.2rem;
     font-size: 0.8rem;
+  }
+
+  .project-card {
+    padding: 1.5rem;
   }
 }
