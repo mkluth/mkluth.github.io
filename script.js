@@ -61,3 +61,18 @@ window.addEventListener("load", () => {
     simulateTypingMotion(terminalBox, originalText, 30);
   }, 1000);
 });
+
+// Easter egg
+console.log(`
+/*
+ * Welcome to the JS console!
+ *
+ * If you're reading this, you're probably a developer too.
+ * Nice to meet you, fellow code enthusiast!
+ *
+ * This site was built with pure HTML, CSS, and JavaScript.
+ * No frameworks, no dependencies - because I'm too lazy to learn one right now.
+ *
+ * Let's build something awesome together if you're interested :)
+ */
+`);
